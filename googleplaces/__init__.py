@@ -330,7 +330,7 @@ class GooglePlaces(object):
         self._sensor = sensor    
         if lat_lng is not None:
             lat_lng_str = '%(lat)s,%(lng)s' % lat_lng
-            self._request_params['location'] = lat_lng_str
+            self._request_params={'location': lat_lng_str}
         self._request_params['radius'] = radius
         if len(types) > 0:
             self._request_params['types'] = '|'.join(types)
